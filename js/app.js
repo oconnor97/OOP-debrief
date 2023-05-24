@@ -19,3 +19,28 @@ class Jazz extends Apple {
         this.seasonality = newSeason;
     }
 }
+
+class Rockit extends Apple {
+    constructor(flavor, texture, color, name, seasonality) {
+        super(flavor, texture, color, name);
+        this.size = size;
+    }
+    overallSize(appleSize) {
+        this.size = newSize;
+    }
+}
+
+const apple1 = new Rockit('Big', 'soft', 'red', 'Rockit', 'year-round', 'small');
+
+apple1.description();
+apple1.seasonsWhenFreshest('year-round');
+apple1.overallSize('small');
+
+console.log(apple1)
+
+const apple2 = new Jazz('Floral', 'strong', 'red or maroons', 'Jazz', 'almost year-round', 'average');
+apple2.description();
+apple2.seasonsWhenFreshest('almost year-round');
+apple1.overallSize('average');
+
+console.log(apple2);
