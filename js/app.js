@@ -6,12 +6,12 @@ class Vehicle {
         this.age = yearMade;
         this.color = color;
 }
-carModel() {
-    console.log('I own a' + this.brand + '.');
+    carModel() {
+        console.log('You own a' + this.brand + '.');
 }
 }
 class Model extends Vehicle {
-    constructor(mod) {
+    constructor(carName, mod) {
         super(carName);
         this.model = mod;
     }
@@ -21,5 +21,18 @@ class Model extends Vehicle {
 }
 
 class Year extends Vehicle { 
-    constructor()
+    constructor(placeMade,) {
+        this.placeMade = placeMade;
 }
+    manufacture() {
+        console.log('Your vehicle was made in' + this.placeMade + ',' + 'in' 
+        + this.yearMade + ', and the color of the vehicle is ' + this.color);
+    }
+}
+
+const car1 = new Year ('Japan', '2015', 'white');
+
+car1.manufacture();
+
+console.log(car1);
+
