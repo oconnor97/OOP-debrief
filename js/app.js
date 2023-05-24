@@ -20,5 +20,12 @@ class Elementary extends School {
     }
 }
 class Highschool extends School {
-    
+    constructor(name, type, city, established) {
+        super(name, type, city, established);
+
+    }
+
 }
+const school1 = new Elementary('Glen Forst', 'Elementary School', 'Falls Church', 1900);
+school1.address();
+console.log(school1);
