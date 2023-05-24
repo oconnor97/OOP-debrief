@@ -1,6 +1,6 @@
-console.log('loaded');
+console.log("loaded");
 
-class Car {
+class Vehicle {
   constructor(brand, model, year, color) {
     this.brand = brand;
     this.model = model;
@@ -9,23 +9,47 @@ class Car {
   }
 
   startEngine() {
-    console.log(`Starting the engine of ${this.brand} ${this.model}`);
+    console.log(
+      "Starting the engine of " +
+        this.brand +
+        " " +
+        this.model +
+        "." +
+        "\u{1F525}"
+    );
+  }
+  yearMade() {
+    this.year;
   }
 
-  accelerate(speed) {
-    console.log(`Accelerating ${this.brand} ${this.model} to ${speed} mph`);
-  }
-
-  brake() {
-    console.log(`Applying brakes to ${this.brand} ${this.model}`);
+  changeColor(newColor) {
+    this.color = newColor;
   }
 }
 
-const myCar = new Car("Toyota", "Camry", 2022, "silver");
+class Car extends Vehicle {
+  constructor(brand, model, year, color, speed) {
+    super(brand, model, year, color);
+    this.speed = speed;
+  }
+  accelerate(newSpeed) {
+    this.speed = newSpeed;
+  }
+}
+
+class RentedCar extends Car {
+  constructor(brand, model, year, color, type) {
+    super(brand, model, year, color);
+    this.type = type;
+  }
+  changeType() {
+    this.type;
+  }
+}
+
+const myCar = new RentedCar("Toyota", "Camry", 2015, "red", "Sedan");
 myCar.startEngine();
-myCar.accelerate(60);
-myCar.brake();
+myCar.accelerate(70);
+myCar.changeType();
 
 console.log(myCar);
-
-
