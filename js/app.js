@@ -15,5 +15,10 @@ class Elementary extends School {
         super(name, type, city);
         this.established = established;
     }
+    oldElementary(yearEsta) {
+        this.established = yearEsta;
+    }
+}
+class Highschool extends School {
     
 }
