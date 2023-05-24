@@ -1,9 +1,9 @@
 console.log('loaded');
 
 class Vehicle {
-    constructor(carName, year, color, ) {
+    constructor(carName, yearMade, color, ) {
         this.brand = carName;
-        this.year = year;
+        this.age = yearMade;
         this.color = color;
 }
 carModel() {
@@ -18,4 +18,8 @@ class Model extends Vehicle {
     show() {
         return this.carModel() + ', it is a ' + this.model;
     }
+}
+
+class Year extends Vehicle { 
+    constructor()
 }
