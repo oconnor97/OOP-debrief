@@ -7,24 +7,29 @@ class TradArt {
   }
   intro() {
     console.log(
-      "I'm a traditional artist and I primarily " + this.draw + " " + this.paint
+      "I'm a traditional artist and I primarily work with " +
+        this.draw +
+        " " +
+        this.paint
     );
   }
 }
 
 class ArtStudent extends TradArt {
-  constructor(draw, paint, sculpt) {}
+  constructor(draw, paint, sculpt) {
+    super(draw, paint, sculpt);
+  }
 }
 
 class ProArtist extends TradArt {
-  constructor(draw, paint, sculpt) {}
+  constructor(draw, paint, sculpt) {
+    super(draw, paint, sculpt);
+  }
 }
 
-const artist1 = new ArtStudent("Jon", "Jackson", 40, "brown", 8);
+const artist1 = new ArtStudent("graphite", "acrylics", "polymer clay");
+const artist2 = new ArtStudent("charcoal", "oils", "ceramics");
 
 artist1.intro();
-person1.addRelative("Jane Doe");
-person1.addSport("snow skiing");
-person1.hasBirthday();
 
-console.log(person1);
+console.log(artist1);
